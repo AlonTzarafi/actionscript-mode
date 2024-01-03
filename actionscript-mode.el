@@ -556,7 +556,8 @@ whitespace. Keep point at same relative point in the line."
 						 ((= actionscript-font-lock-level 2) 'actionscript-font-lock-keywords-2)
 						 ((= actionscript-font-lock-level 3) 'actionscript-font-lock-keywords-3)))
           nil nil))
-	(run-mode-hooks 'actionscript-mode-hook))
+  (run-mode-hooks 'prog-mode-hook)
+  (run-mode-hooks 'actionscript-mode-hook))
 
 ;; We need to make an adjustment to hideshow to work properly with AS syntax.
 (add-to-list 'hs-special-modes-alist '(actionscript-mode "{" "}" "/[*/]" nil hs-c-like-adjust-block-beginning))
